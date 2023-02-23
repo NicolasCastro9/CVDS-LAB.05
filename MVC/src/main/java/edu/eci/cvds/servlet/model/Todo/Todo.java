@@ -5,6 +5,6 @@ public class Todo{
     public Todo(){}
 
     public int getter(){return number;}
-    public int setter(int numero){number = numero;}
+    public void setter(int numero){number = numero;}
 } 
 
