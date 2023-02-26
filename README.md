@@ -17,7 +17,7 @@ Asegúrese de presionar ENTER dos veces después de ingresar elcomando.
 Revise el resultado obtenido.
 
 
-![](https://github.com/NicolasCastro9/CVDS-LAB.05/blob/main/FOTOS/2.png?raw=true)
+
 
 
 
