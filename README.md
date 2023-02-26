@@ -1,8 +1,8 @@
 # CVDS-LAB.05
 ## 1.Abra una terminal Linux o consola de comandos Windows.
 ## 2. Realice una conexión síncrona TCP/IP a través de Telnet alsiguiente servidor:
-Host:www.escuelaing.edu.co
-Puerto: 80
+* Host:www.escuelaing.edu.co
+* Puerto: 80
 Teniendo en cuenta los parámetros delcomando telnet:
 telnet HOST PORT
 ## 3. Antes de que elservidorcierre la conexión por falta de comunicación:
