@@ -9,6 +9,7 @@ telnet HOST PORT
 ![](https://github.com/NicolasCastro9/CVDS-LAB.05/blob/main/FOTOS/1.png?raw=true)
 
 ## 3. Antes de que el servidorcierre la conexión por falta de comunicación:
+
 Revise la página 36 del RFC del protocolo HTTP,sobre cómo realizar una petición GET. Con esto,solicite alservidor el recurso.
 ‘sssss/abc.html’usando la versión 1.0 deHTTP.
 
@@ -17,11 +18,48 @@ Asegúrese de presionar ENTER dos veces después de ingresar elcomando.
 Revise el resultado obtenido.
 
 
-(![image](https://user-images.githubusercontent.com/98556822/221438957-5f3a2c4d-3cd9-4cae-96c0-237b700f61a1.png)
+![image](https://user-images.githubusercontent.com/98556822/221438957-5f3a2c4d-3cd9-4cae-96c0-237b700f61a1.png)
 
 
+### ¿Qué codigo de error sale?, revise el significado del mismo en la lista de códigos de estado HTTP.
 
+Una redirección 301, también conocida como redireccionamiento 301, indica el cambio permanente de la ubicación de una página web a otra. La parte 301 hace referencia al código de estado HTTP de la página que está siendo redirigida.
 
-● ¿Qué codigo de error sale?, revise el significado del mismo en la lista de códigos de estadoHTTP.
-● ¿Qué otroscódigos de error existen?,¿En qué caso se manejarán?
-● Responder en el README.md según lo indicado en la última sección de este laboratorio (ENTREGA).
+### ¿Qué otros códigos de error existen?,¿En qué caso se manejarán?
+
+300 Multiple Choice: User-Agent o el usuario debe escoger uno de ellos. No hay forma estandarizada de seleccionar una de las respuestas.
+
+302 Found: el recurso de la URL solicitada ha sido cambiado temporalmente.
+
+303 See Other: El servidor envía esta respuesta para dirigir al cliente a un nuevo recurso solicitado a otra dirección usando una petición GET.
+
+304 Not Modified: Le indica al cliente que la respuesta no ha sido modificada. Entonces, el cliente puede continuar usando la misma versión almacenada en su caché.
+
+305 Use Proxy Deprecated: una respuesta solicitada debe ser accedida desde un proxy.
+
+306 unused: Este código de respuesta ya no es usado más. Actualmente se encuentra reservado. Fue usado en previas versiones de la especificación HTTP1.1.
+
+400 Bad Request: Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis inválida.
+
+401 Unauthorized: Es necesario autenticar para obtener la respuesta solicitada la autenticación es posible.
+
+402 Payment Required: Este código de respuesta está reservado para futuros usos. El objetivo inicial de crear este código fue para ser utilizado en sistemas digitales de pagos. Sin embargo, no está siendo usado actualmente.
+
+403 Forbidden: El cliente no posee los permisos necesarios para cierto contenido, por lo que el servidor está rechazando otorgar una respuesta apropiada.
+
+404 Not Found: El servidor no pudo encontrar el contenido solicitado.
+
+405 Method Not Allowed: El método solicitado es conocido por el servidor pero ha sido deshabilitado y no puede ser utilizado.
+
+500 Internal Server Error: El servidor ha encontrado una situación que no sabe cómo manejarla.
+
+501 Not Implemented (en-US): El método solicitado no está soportado por el servidor y no puede ser manejado.
+
+502 Bad Gateway: Esta respuesta de error significa que el servidor, mientras trabaja como una puerta de enlace para obtener una respuesta necesaria para manejar la petición, obtuvo una respuesta inválida.
+
+503 Service Unavailable: El servidor no está listo para manejar la petición. 
+
+504 Gateway Timeout: Esta respuesta de error es dada cuando el servidor está actuando como una puerta de enlace y no puede obtener una respuesta a tiempo.
+
+505 HTTP Version Not Supported: La versión de HTTP usada en la petición no está soportada por el servidor.
+
