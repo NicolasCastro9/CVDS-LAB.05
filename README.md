@@ -17,7 +17,7 @@ Asegúrese de presionar ENTER dos veces después de ingresar elcomando.
 Revise el resultado obtenido.
 
 
-![](![image](https://user-images.githubusercontent.com/98556822/221438957-5f3a2c4d-3cd9-4cae-96c0-237b700f61a1.png)
+(![image](https://user-images.githubusercontent.com/98556822/221438957-5f3a2c4d-3cd9-4cae-96c0-237b700f61a1.png)
 
 
 
