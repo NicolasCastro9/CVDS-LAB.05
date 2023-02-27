@@ -105,7 +105,7 @@ TRACE: realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta a
 
 OPTIONS: es utilizado para describir las opciones de comunicación para el recurso de destino.
 
-Update: Actualizar recursos
+UPDATE: Actualizar recursos
 
 
 ## 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino elcomando curl con ayuda de la linea d comandos: “curl
