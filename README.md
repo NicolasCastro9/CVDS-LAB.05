@@ -63,3 +63,38 @@ Una redirección 301, también conocida como redireccionamiento 301, indica el c
 
 505 HTTP Version Not Supported: La versión de HTTP usada en la petición no está soportada por el servidor.
 
+## 4. Realice una nueva conexión con telnet, esta vez a:
+* Host:www.httpbin.org
+* Puerto: 80
+* VersiónHTTP:1.1
+Ahora,solicite (GET) el recurso /html.¿Qué se obtiene como resultado?
+
+
+
+
+¡Muy bien!, ¡Acaba de usar del protocoloHTTP sin un navegador Web!. Cada vez que se usa un navegador, éste se conecta a un servidorHTTP, envía peticiones
+(del protocoloHTTP), espera el resultado de las mismas, y -sise trata de contenidoHTML- lo interpreta y dibuja.
+## 5. Seleccione elcontenido HTML de la respuesta y copielo alcortapapeles CTRL-SHIFT-C. Ejecute elcomando wc (word count) para contar palabrascon la
+opción -c para contar el número de caracteres:
+wc -c
+
+
+
+Pegue elcontenido del portapapelescon CTRL-SHIFT-V y presione CTRL-D (fin de archivo de Linux). Si no termina elcomando wc presione CTRL-D
+de nuevo.No presione mas de dos veces CTRL-D indica que se termino la entrada y puede cerrarle la terminal. Debe salir el resultado de la cantidad de
+caracteres que tiene elcontenidoHTML que respondió elservidor.
+
+
+Claro está, las peticiones GET son insuficientes en muchoscasos. Investigue:¿Cuál esla diferencia entre los verbos GET y POST?¿Qué otrostipos de
+peticiones existen?
+
+
+
+## 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino elcomando curl con ayuda de la linea d comandos: “curl
+www.httpbin.org”
+Utilice ahora el parámetro -v y con el parámetro -i:
+
+curl -v www.httpbin.org
+curl -i www.httpbin.org
+¿Cuáles son las diferencias con los diferentes parámetros?
+
