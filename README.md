@@ -89,6 +89,23 @@ caracteres que tiene elcontenidoHTML que respondió elservidor.
 Claro está, las peticiones GET son insuficientes en muchoscasos. Investigue:¿Cuál esla diferencia entre los verbos GET y POST?¿Qué otrostipos de
 peticiones existen?
 
+GET: Leer la representacion de un recurso, devuelve la representacion en un formato concreto HTML, XML, JSON o imágenes, JavaScript, CSS, etc.
+
+POST: se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor.
+
+HEAD: pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.
+
+PUT: reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.
+
+DELETE: elimina un recurso en específico.
+
+CONNECT: establece un túnel hacia el servidor identificado por el recurso.
+
+TRACE: realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino.
+
+OPTIONS: es utilizado para describir las opciones de comunicación para el recurso de destino.
+
+Update: Actualizar recursos
 
 
 ## 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino elcomando curl con ayuda de la linea d comandos: “curl
@@ -99,3 +116,6 @@ curl -v www.httpbin.org
 curl -i www.httpbin.org
 ¿Cuáles son las diferencias con los diferentes parámetros?
 
+El comando curl -v nos muestra una informacion completa de la peticion GET realizada y el estado de la peticion en este caso 200 exitosa
+
+El comando curl -i nos muestra solo la informacoin completa del estado de la peticion en este caso 200
