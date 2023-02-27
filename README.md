@@ -69,6 +69,7 @@ Una redirección 301, también conocida como redireccionamiento 301, indica el c
 * VersiónHTTP:1.1
 Ahora,solicite (GET) el recurso /html.¿Qué se obtiene como resultado?
 
+![image](https://user-images.githubusercontent.com/98556822/221474425-4a2befb5-dbb1-4311-be55-ccfd4226a8ec.png)
 
 
 
