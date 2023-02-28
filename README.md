@@ -1,4 +1,6 @@
+# ESTUDIANTES: NICOLAS CASTRO Y SERGIO GONZALES
 # CVDS-LAB.05
+# PARTE 1: JUGANDO A SER UNCLIENTE HTTP
 ## 1.Abra una terminal Linux o consola de comandos Windows.
 ## 2. Realice una conexión síncrona TCP/IP a través de Telnet alsiguiente servidor:
 * Host:www.escuelaing.edu.co
