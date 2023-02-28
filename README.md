@@ -157,6 +157,8 @@ responseWriter.flush();
 }
 }
 ```
+Esta clase es un ejemplo de GET que escribe el hello mas el parametro de name
+
 ## 2. En el pom.xml, modifique la propiedad "packaging"con el valor "war". Agregue la siguiente dependencia:
 
 ## 3. Revise en el pom.xml para qué puerto TCP/IP está configurado elservidor embebido de Tomcat (versección de plugins).
@@ -164,7 +166,13 @@ responseWriter.flush();
 ## 4. Compile y ejecute la aplicación en elservidor embebido Tomcat, a través de Maven con:
 
 * mvn package
+
+![image](https://user-images.githubusercontent.com/98556822/221758754-250ed5a5-7030-4430-bc33-2fec7225df66.png)
+
 * mvn tomcat7:run
+
+![image](https://user-images.githubusercontent.com/98556822/221758795-d60ee8d7-5a3c-4ae1-9d08-5e1bf29344b9.png)
+
 ## 5. Abra un navegador, y en la barra de direcciones ponga la URL con la cualse le enviarán peticiones al ‘SampleServlet’. Tenga en cuenta que la URL tendrá como host ‘localhost’,como puerto, elconfigurado en el pom.xml y el path debe ser el del Servlet. Debería obtener un mensaje de saludo.
 
 ## 6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp).
