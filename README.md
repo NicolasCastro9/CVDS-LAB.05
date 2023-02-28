@@ -127,3 +127,54 @@ El comando curl -i se utiliza para ver los encabezados de respuesta HTTP
 
 ![image](https://user-images.githubusercontent.com/98556822/221476440-57c08a0b-6178-474e-95c2-0c209d59111c.png)
 
+
+# PARTE II. -HACIENDO UNA APLICACIÓN WEB DINÁMICA A BAJO NIVEL.
+
+## 1. Revise la clase SampleServlet incluida a continuacion, e identifique qué hace:
+```
+package edu.eci.cvds.servlet;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Optional;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+@WebServlet(
+urlPatterns = "/helloServlet"
+)
+public class SampleServlet extends HttpServlet{
+static final long serialVersionUID = 35L;
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+Writer responseWriter = resp.getWriter();
+Optional<String> optName = Optional.ofNullable(req.getParameter("name"));
+String name = optName.isPresent() && !optName.get().isEmpty() ? optName.get() : "";
+resp.setStatus(HttpServletResponse.SC_OK);
+responseWriter.write("Hello" + name + "!");
+responseWriter.flush();
+}
+}
+```
+## 2. En el pom.xml, modifique la propiedad "packaging"con el valor "war". Agregue la siguiente dependencia:
+
+## 3. Revise en el pom.xml para qué puerto TCP/IP está configurado elservidor embebido de Tomcat (versección de plugins).
+
+## 4. Compile y ejecute la aplicación en elservidor embebido Tomcat, a través de Maven con:
+
+* mvn package
+* mvn tomcat7:run
+## 5. Abra un navegador, y en la barra de direcciones ponga la URL con la cualse le enviarán peticiones al ‘SampleServlet’. Tenga en cuenta que la URL tendrá como host ‘localhost’,como puerto, elconfigurado en el pom.xml y el path debe ser el del Servlet. Debería obtener un mensaje de saludo.
+
+## 6. Observe que el Servlet ‘SampleServlet’ acepta peticiones GET, y opcionalmente, lee el parámetro ‘name’. Ingrese la misma URL, pero ahora agregando un parámetro GET (si no sabe como hacerlo, revise la documentación en http://www.w3schools.com/tags/ref_httpmethods.asp).
+
+## 7. Busque el artefacto gson en el repositorio de maven y agregue la dependencia.
+
+## 8. En el navegador revise la dirección https://jsonplaceholder.typicode.com/todos/1. Intente cambiando diferentes números al final del path de la url.
+
+## 9. Basado en la respuesta que le da elservicio del punto anterior,cree la clase edu.eci.cvds.servlet.model.Todo con un constructor vacío y los métodos getter y setter para las propiedades de los"To Dos" que se encuentran en la url indicada.
+
+
+
+
