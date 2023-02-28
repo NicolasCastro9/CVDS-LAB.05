@@ -183,6 +183,13 @@ Esta clase es un ejemplo de GET que escribe el hello mas el parametro de name
 
 ## 9. Basado en la respuesta que le da elservicio del punto anterior,cree la clase edu.eci.cvds.servlet.model.Todo con un constructor vacío y los métodos getter y setter para las propiedades de los"To Dos" que se encuentran en la url indicada.
 
+## 10. Utilice la siguiente clase para consumir elservicio que se encuentra en la dirección url del punto anterior:
+
+## 11. Cree una clase que herede de la claseHttpServlet (similar a SampleServlet), y para la misma sobrescriba el método heredado doGet. Incluya la anotación @Override para verificar –en tiempo de compilación- que efectivamente se esté sobreescribiendo un método de lassuperclases.
+
+
+## 12. Para indicar en qué URL elservlet interceptará las peticiones GET, agregue al método la anotación @WebServlet, y en dicha anotación, defina la propiedad urlPatterns, indicando la URL (que usted defina) a la cualse asociará elservlet.
+
 
 
 
