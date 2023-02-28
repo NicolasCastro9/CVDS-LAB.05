@@ -116,12 +116,12 @@ curl -v www.httpbin.org
 curl -i www.httpbin.org
 ¿Cuáles son las diferencias con los diferentes parámetros?
 
-El comando curl -v nos muestra una informacion completa de la peticion GET realizada y el estado de la peticion en este caso 200 exitosa
+El comando curl -v se utiliza para obtener información más detallada sobre la solicitud y la respuesta HTTP. caso 200 exitosa
 
 ![image](https://user-images.githubusercontent.com/98556822/221476408-4258e2cd-9f64-4bfc-8162-51fda1f615b4.png)
 
 
-El comando curl -i nos muestra solo la informacoin completa del estado de la peticion en este caso 200
+El comando curl -i se utiliza para ver los encabezados de respuesta HTTP
 
 ![image](https://user-images.githubusercontent.com/98556822/221476440-57c08a0b-6178-474e-95c2-0c209d59111c.png)
 
