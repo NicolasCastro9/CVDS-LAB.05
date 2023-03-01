@@ -200,3 +200,31 @@ Esta clase es un ejemplo de GET que escribe el hello mas el parametro de name
 ![image](https://user-images.githubusercontent.com/98556822/222016781-2b404692-6677-45b0-b34a-e66b365cef48.png)
 ![image](https://user-images.githubusercontent.com/98556822/222016818-ad2c9c79-7e37-421f-a7e5-2bbe1045df76.png)
 
+
+
+
+# PARTE III.
+## 16. En su servlet,sobreescriba el método doPost, y haga la misma implementación del doGet.
+
+## 17. Cree el archivo index.html en el directorio src/main/webapp/index.html de la siguiente manera:
+
+## 18. En la página anterior, cree un formulario que tenga un campo para ingresar un número (si no ha manejado html antes, revise http://www.w3schools.com/html/ ) y un botón. El formulario debe usarcomo método ‘POST’, y como acción, la ruta relativa del último servletcreado
+(es decir la URL pero excluyendo ‘http://localhost:8080/’).
+
+![image](https://user-images.githubusercontent.com/98556822/222281408-4d4981b0-7cc0-400e-9368-600b8a9ca7d2.png)
+
+
+## 19. Revise este ejemplo de validación de formularioscon javascript y agruéguelo a su formulario, de manera que -al momento de hacer ‘submit’- desde el browserse valide que el valor ingresado es un valor numérico.
+
+## 20. Recompile y ejecute la aplicación. Abra en su navegador en la página del formulario, y rectifique que la página hecha anteriormente sea mostrada. Ingrese los datos y verifique losresultados. Cambie el formulario para que ahora en lugar de POST, use el método GET . Qué diferencia observa?
+
+![image](https://user-images.githubusercontent.com/98556822/222281494-4609b860-ad38-4ebd-a1d7-5f3575a11385.png)
+
+a simple vista hacen exactamente los mismo pero la diferencia entre GET y POST es que GET se utiliza para solicitar recursos o datos del servidor, mientras que POST se utiliza para enviar datos al servidor
+
+
+## 21.¿Qué se está viendo? Revise cómo están implementadoslos métodos de la clase Service.java para entender el funcionamiento interno.
+
+El primer método getTodo toma un parámetro id y devuelve un objeto Todo correspondiente al ID. El segundo método todosToHTMLTable toma una lista de objetos Todo y devuelve la representacion de la tabla con los datos de todos los objetos Todo
+
+
