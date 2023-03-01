@@ -26,7 +26,7 @@ public class ServletS extends HttpServlet{
         Writer responseWriter = resp.getWriter();
         try {
             Optional <Integer> optId = Optional.ofNullable(Integer.parseInt(req.getParameter("id")));
-            Integer id = optId.isPresent() ? optId.get():1;
+            Integer id = optId.isPresent() ? optId.get(): null;
             Todo thing = Service.getTodo(id);
             list_cosas.add(thing);
             resp.setStatus(HttpServletResponse.SC_OK);
@@ -49,7 +49,7 @@ public class ServletS extends HttpServlet{
         Writer responseWriter = resp.getWriter();
         try {
             Optional <Integer> optId = Optional.ofNullable(Integer.parseInt(req.getParameter("id")));
-            Integer id = optId.isPresent() ? optId.get():1;
+            Integer id = optId.isPresent() ? optId.get(): null;
             Todo thing = Service.getTodo(id);
             list_cosas.add(thing);
             resp.setStatus(HttpServletResponse.SC_OK);
@@ -63,8 +63,10 @@ public class ServletS extends HttpServlet{
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }catch (MalformedURLException e){
             responseWriter.write("error interno en el Servidor ");
+            resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         }catch (Exception e){
-        responseWriter.write("requerimiento inválido");
+            responseWriter.write("requerimiento inválido");
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
         }
     }
 } 

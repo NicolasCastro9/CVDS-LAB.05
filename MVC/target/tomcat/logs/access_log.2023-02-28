@@ -22,3 +22,8 @@
 0:0:0:0:0:0:0:1 - - [28/Feb/2023:19:36:44 -0500] "GET /getServlets?id=5 HTTP/1.1" 200 548 http-bio-8080-exec-4 130
 0:0:0:0:0:0:0:1 - - [28/Feb/2023:19:36:51 -0500] "GET /getServlets?id=2 HTTP/1.1" 200 634 http-bio-8080-exec-4 119
 0:0:0:0:0:0:0:1 - - [28/Feb/2023:19:37:03 -0500] "GET /getServlets?id=50000 HTTP/1.1" 404 14 http-bio-8080-exec-2 321
+0:0:0:0:0:0:0:1 - - [28/Feb/2023:21:09:05 -0500] "GET /getServlets?id=50000 HTTP/1.1" 404 14 http-bio-8080-exec-3 1368
+0:0:0:0:0:0:0:1 - - [28/Feb/2023:21:44:23 -0500] "POST /getServlets HTTP/1.1" 405 1067 http-bio-8080-exec-10 148
+0:0:0:0:0:0:0:1 - - [28/Feb/2023:21:44:23 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-10 11
+0:0:0:0:0:0:0:1 - - [28/Feb/2023:21:44:30 -0500] "POST /getServlets HTTP/1.1" 405 1067 http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [28/Feb/2023:22:03:10 -0500] "POST /getServlets HTTP/1.1" 405 1067 http-bio-8080-exec-1 17
