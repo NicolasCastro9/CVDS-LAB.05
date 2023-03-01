@@ -44,6 +44,29 @@ public class ServletS extends HttpServlet{
         responseWriter.write("requerimiento inválido");
         }
     }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Writer responseWriter = resp.getWriter();
+        try {
+            Optional <Integer> optId = Optional.ofNullable(Integer.parseInt(req.getParameter("id")));
+            Integer id = optId.isPresent() ? optId.get():1;
+            Todo thing = Service.getTodo(id);
+            list_cosas.add(thing);
+            resp.setStatus(HttpServletResponse.SC_OK);
+            responseWriter.write(Service.todosToHTMLTable(list_cosas));
+            responseWriter.flush();
+        }catch ( NumberFormatException e){
+            responseWriter.write("Requerimiento Inválido");
+            resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+        }catch (FileNotFoundException e){
+            responseWriter.write("No encontrado.");
+            resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
+        }catch (MalformedURLException e){
+            responseWriter.write("error interno en el Servidor ");
+        }catch (Exception e){
+        responseWriter.write("requerimiento inválido");
+        }
+    }
 } 
 
 //
