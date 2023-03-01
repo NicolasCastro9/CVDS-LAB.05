@@ -190,6 +190,13 @@ Esta clase es un ejemplo de GET que escribe el hello mas el parametro de name
 
 ## 12. Para indicar en qué URL elservlet interceptará las peticiones GET, agregue al método la anotación @WebServlet, y en dicha anotación, defina la propiedad urlPatterns, indicando la URL (que usted defina) a la cualse asociará elservlet.
 
+## 13. Teniendo en cuenta lassiguientes métodos disponibles en los objetos ServletRequest y ServletResponse recibidos por el método doGet:
 
+## 14. Una vez hecho esto, verifique el funcionamiento de la aplicación, recompile y ejecute la aplicación.
 
+## 15. Intente hacer diferentesconsultas desde un navegador Web para probar las diferentesfuncionalidades.
+
+![image](https://user-images.githubusercontent.com/98556822/222016729-a338e335-9279-4dd8-9a3b-7d3ae55063c8.png)
+![image](https://user-images.githubusercontent.com/98556822/222016781-2b404692-6677-45b0-b34a-e66b365cef48.png)
+![image](https://user-images.githubusercontent.com/98556822/222016818-ad2c9c79-7e37-421f-a7e5-2bbe1045df76.png)
 
