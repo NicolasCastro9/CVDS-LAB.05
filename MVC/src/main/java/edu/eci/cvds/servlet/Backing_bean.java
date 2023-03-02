@@ -1,6 +1,8 @@
 
 
 package edu.eci.cvds.servlet;
+import java.util.Random;
+
 import javax.inject.Named;
 @Named("guessBean")
 @javax.enterprise.context.SessionScoped
@@ -46,5 +48,23 @@ public class Backing_bean {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	public void guess(int guessNumber) {
+        if(numero == guessNumber) {
+            estado = "Ganaste con numero de intentos : " + intentos + "Y con un premio de : " + premio;
+        } else if (premio == 0){
+            estado = "Perdiste D:";
+        }else {
+            premio -= 10000;
+            intentos ++;
+        }
+    }
+
+    public void restart() {
+        Random numberRandom = new Random();
+        numero = numberRandom.nextInt(100);
+        premio = 100000;
+        intentos = 0;
+        estado = "Jugando";
+    }
     
 }
