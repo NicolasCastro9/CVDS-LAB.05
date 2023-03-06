@@ -1,70 +1,86 @@
 
 
 package edu.eci.cvds.servlet;
+import java.util.ArrayList;
 import java.util.Random;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
-import javax.inject.Named;
-@Named("guessBean")
-@javax.enterprise.context.SessionScoped
+
+@ManagedBean(name = "guessBean")
+@SessionScoped
 
 public class Backing_bean {
-    private int numero;
-	private int intentos;
-	private int premio;
-	private String estado;
+    private int number;
+	private int intent;
+	private int price;
+	private String state;
+    private ArrayList<Integer> pastIntents;
 
     public Backing_bean() {
+        restart();
 	}
 
-
-    public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
-	}
-
-	public int getNumeroIntentos() {
-		return intentos;
-	}
-
-	public void setNumeroIntentos(int numeroIntentos) {
-		this.intentos = numeroIntentos;
-	}
-
-	public int getPremio() {
-		return premio;
-	}
-
-	public void setPremio(int premio) {
-		this.premio = premio;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-	public void guess(int guessNumber) {
-        if(numero == guessNumber) {
-            estado = "Ganaste con numero de intentos : " + intentos + "Y con un premio de : " + premio;
-        } else if (premio == 0){
-            estado = "Perdiste D:";
+    public void guess(int guessNumber) {
+        if(number == guessNumber) {
+            state = "Ganaste con numero de intentos : " + intent + "Y con un premio de : " + price;
+        } else if (price == 0){
+            state = "Perdiste D:";
         }else {
-            premio -= 10000;
-            intentos ++;
+            price -= 10000;
+            pastIntents.add(guessNumber);
+            intent ++;
         }
     }
 
     public void restart() {
         Random numberRandom = new Random();
-        numero = numberRandom.nextInt(100);
-        premio = 100000;
-        intentos = 0;
-        estado = "Jugando";
+        number = numberRandom.nextInt(100);
+        price = 100000;
+        intent = 0;
+        state = "Jugando";
+        pastIntents = new ArrayList<>();
+    }
+
+
+
+
+    public int getNumber() {
+		return number;
+	}
+
+	public void setNumber(int guessnumber) {
+		this.number = guessnumber;
+	}
+
+	public int getIntent() {
+		return intent;
+	}
+
+	public void setIntent(int intent) {
+		this.intent = intent;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+
+    public ArrayList<Integer> getPastIntents() {
+        return pastIntents;
     }
     
 }
