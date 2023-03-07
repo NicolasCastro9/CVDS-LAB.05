@@ -11,8 +11,23 @@ xmlns:p="http://primefaces.org/ui">
             <p:outputLabel value="#{guessBean.price}"/>
             <p:outputLabel value="#{guessBean.intent}"/>
             <p:outputLabel value="#{guessBean.pastIntents}"/>
+            
             <p:commandButton update="guess_form" actionListener="#{guessBean.guess(entrada.value)}" value="Adivinar"/>
             <p:commandButton  update="guess_form" actionListener="#{guessBean.restart}" value = "Reiniciar"/>
+
+            <div class="card">
+                <p:dataTable var="attempt" value="#{guessBean.attempts}">
+                    <p:column headerText="Id">
+                        <h:outputText value = "#{guessBean.attempts.get(guessBean.attempts.indexOf(attempt))}"/>
+                    </p:column>
+                    <p:column headerText="Datos">
+                        <h:outputText value = "#{guessBean.pastIntents.get(guessBean.attempts.indexOf(attempt))}"/>
+                    </p:column>
+                </p:dataTable>
+            </div>
         </h:form>
     </h:body>
+
+
+      
 </html>
