@@ -1,4 +1,3 @@
-# ESTUDIANTES: NICOLAS CASTRO Y SERGIO GONZALES
 # CVDS-LAB.05
 # PARTE 1: JUGANDO A SER UNCLIENTE HTTP
 ## 1.Abra una terminal Linux o consola de comandos Windows.
