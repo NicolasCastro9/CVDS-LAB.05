@@ -228,3 +228,18 @@ a simple vista hacen exactamente los mismo pero la diferencia entre GET y POST e
 El primer método getTodo toma un parámetro id y devuelve un objeto Todo correspondiente al ID. El segundo método todosToHTMLTable toma una lista de objetos Todo y devuelve la representacion de la tabla con los datos de todos los objetos Todo
 
 
+# PARTE IV. 
+
+## 10. Si todo funcionó correctamente, realice lassiguientes pruebas:
+# a. Abra la aplicación en un explorador. Realice algunas pruebascon el juego e intente adivinar el número.
+
+
+# b. Abra la aplicación en doscomputadores diferentes. Si no dispone de uno, hágalo en dos navegadores diferentes(por ejemplo Chrome y Firefox; incluso se puede en un único navegador usando una ventana normal y una ventana de incógnito / privada).Haga cinco intentos en uno, y luego un intento en el otro.¿Qué valor tiene cada uno?
+
+
+# c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique elcódigo del backing-bean de manera que use la anotación @SessionScoped en lugar de @ApplicationScoped. Reinicie la aplicación y repita el ejercicio anterior. ¿Coinciden los valores del premio?. Dado la anterior,¿Cuál esla diferencia entre los backing-beans de sesión y los de aplicación?
+
+# d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores): Ubique elcódigoHTML generado por elservidor. busque el elemento oculto, que contiene el número generado aleatoriamente. En la sección de estilos, deshabilite el estilo que oculta el elemento para que sea visible. Observe elcambio en la página,cada vez que se realiza un cambio en el estilo. Revise qué otros estilosse pueden agregar a los diferentes elementos y qué efecto tienen en la visualización de la página. Actualice la página. Loscambios de estilos realizados desaparecen, puesse realizaron únicamente en la visualización, la respuesta delservidor sigue siendo la misma, ya que elcontenido de los archivos allí almacenados no se ha modificado. Revise qué otros cambiosse pueden realizar y qué otra información se puede obtener de las herramientas de desarrollador.
+
+
+
