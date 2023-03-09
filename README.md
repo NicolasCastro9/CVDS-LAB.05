@@ -233,13 +233,22 @@ El primer método getTodo toma un parámetro id y devuelve un objeto Todo corres
 ## 10. Si todo funcionó correctamente, realice lassiguientes pruebas:
 # a. Abra la aplicación en un explorador. Realice algunas pruebascon el juego e intente adivinar el número.
 
+![image](https://user-images.githubusercontent.com/98556822/223919089-dd7f1530-63f9-4b2a-8de2-9eb407e2fb0c.png)
+
 
 # b. Abra la aplicación en doscomputadores diferentes. Si no dispone de uno, hágalo en dos navegadores diferentes(por ejemplo Chrome y Firefox; incluso se puede en un único navegador usando una ventana normal y una ventana de incógnito / privada).Haga cinco intentos en uno, y luego un intento en el otro.¿Qué valor tiene cada uno?
+
+![image](https://user-images.githubusercontent.com/98556822/223919124-c7219dea-383c-417b-b2de-ee0364c706c7.png)
 
 
 # c. Aborte el proceso de Tomcat-runner haciendo Ctrl+C en la consola, y modifique elcódigo del backing-bean de manera que use la anotación @SessionScoped en lugar de @ApplicationScoped. Reinicie la aplicación y repita el ejercicio anterior. ¿Coinciden los valores del premio?. Dado la anterior,¿Cuál esla diferencia entre los backing-beans de sesión y los de aplicación?
 
+@ApplicationScoped se utiliza para almacenar información global a la aplicación mientras que @SessionScoped se utiliza para almacenar información específica de cada sesión de usuario.
+
 # d. Por medio de las herramientas de desarrollador del explorador (Usando la tecla "F12" en la mayoría de exploradores): Ubique elcódigoHTML generado por elservidor. busque el elemento oculto, que contiene el número generado aleatoriamente. En la sección de estilos, deshabilite el estilo que oculta el elemento para que sea visible. Observe elcambio en la página,cada vez que se realiza un cambio en el estilo. Revise qué otros estilosse pueden agregar a los diferentes elementos y qué efecto tienen en la visualización de la página. Actualice la página. Loscambios de estilos realizados desaparecen, puesse realizaron únicamente en la visualización, la respuesta delservidor sigue siendo la misma, ya que elcontenido de los archivos allí almacenados no se ha modificado. Revise qué otros cambiosse pueden realizar y qué otra información se puede obtener de las herramientas de desarrollador.
+
+![image](https://user-images.githubusercontent.com/98556822/223919170-ca44093c-d83f-4a6d-ae62-e432dbc0b00b.png)
+
 
 
 
